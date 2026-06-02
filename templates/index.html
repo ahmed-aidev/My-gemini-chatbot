@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ChatBot</title>
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chatbot AI</h2> 
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="message bot-message">Hello! How May I Help You.?</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message here..." oninput="checkInput()" onkeypress="handleKeyPress(event)">
+            <button id="sendBtn" onclick="sendMessage()" disabled>Send</button>
+        </div>
+    </div>
+
+    <!-- JavaScript File Link -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
